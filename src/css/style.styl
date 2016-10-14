@@ -1,0 +1,53 @@
+// Import all partials
+@require './_menu.styl'
+
+.content
+  margin 0 0 0 150px
+  padding 10px 30px
+  width 100%
+
+.module
+  background lightgray
+  padding 1px 20px
+  border-radius 5px
+  box-sizing border-box
+  margin-bottom 20px
+
+.card
+  background #BAD455
+  padding 10px 30px
+  margin-bottom 20px
+  margin-left 10px
+  &:first-child
+    margin-left 0
+
+.blob
+  margin-bottom 10px
+  i
+    padding-left 20px
+
+.group:after
+  content ""
+  display table
+  clear both
+
+.pull-left
+  float left
+
+.pull-right
+  float right
+
+.grid-flex
+  display flex
+  &.grid-flex-between
+    justify-content space-between
+  .grid-flex-item-1
+    width 100%
+  .grid-flex-item-1-2
+    min-width 49%
+
+.grid-spacing-vertical
+  margin-top auto
+
+.grid-spacing-horizontal
+  margin-left auto

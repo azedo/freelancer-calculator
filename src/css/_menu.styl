@@ -1,0 +1,29 @@
+.menu
+  position: fixed;
+  width: 150px;
+  top: 0;
+  bottom: 0;
+  background: rgb(37, 42, 58);
+  ul
+    margin 0
+    padding 20px
+    display flex
+    flex-direction column
+    height 100%
+    li
+      list-style none
+      padding 0 0 20px 0
+
+.menu-link
+  color white
+  text-decoration none
+  transition color ease 0.2s
+  &:hover
+    color lightgray
+    border-bottom 2px solid lightgray
+
+.menu-link-active
+  border-bottom 2px solid lightgray
+
+.menu-link-last
+  margin-bottom 20px

@@ -1,25 +1,59 @@
 // Import all partials
-@require './_menu.styl'
+@require './modules/_user-info.styl'
+@require './modules/_menu.styl'
+@require './modules/_form.styl'
+@require './modules/_tables.styl'
 
 .content
-  margin 0 0 0 150px
+  position fixed
+  right 0
+  left 0
+  margin 0 0 0 180px
+  height 100%
+  background-color #F2F2F2
+  overflow auto
+
+.inner
+  display block
+
+.page
   padding 10px 30px
-  width 100%
 
 .module
-  background lightgray
+  background white
+  border 1px solid rgba(211, 211, 211, 0.63)
   padding 1px 20px
   border-radius 5px
   box-sizing border-box
   margin-bottom 20px
 
 .card
-  background #BAD455
-  padding 10px 30px
   margin-bottom 20px
   margin-left 10px
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  width 80px
   &:first-child
     margin-left 0
+  &:hover
+    .card-image
+      opacity 0.5
+  .card-image
+    background #BAD455
+    height 80px
+    width 80px
+    display block
+    border-radius 5px
+    opacity 1
+    transition all 0.3s ease
+    .card-text
+      line-height 78px
+      font-size 50px
+      color white
+      text-shadow 1px 1px 1px rgba(0,0,0,0.1)
+  .card-title
+    margin-top 5px
 
 .blob
   margin-bottom 10px

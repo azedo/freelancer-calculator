@@ -2,20 +2,29 @@
 
 // main imports
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+// components import
+import ProjectModule from '../components/ProjectModule';
 
 class Projects extends Component {
   render() {
     return (
       <div>
-        <h2>Projects Page!</h2>
-        <ul>
-          <li><Link to="/app/projects/Sadhu">Sadhu</Link></li>
-          <li><Link to="/app/projects/Fitz">Fitz</Link></li>
-          <li><Link to="/app/projects/Layla">Layla</Link></li>
-          <li><Link to="/app/projects/Kira">Kira</Link></li>
-          <li><Link to="/app/projects/Belinha">Belinha</Link></li>
-        </ul>
+        <div className="grid-flex grid-flex-between">
+          <div className="grid-flex-item-1-2">
+            <ProjectModule title="Active Projects" projects={this.props.activeProjects} />
+          </div>
+          <div className="grid-flex-item-1-2">
+            <ProjectModule title="Waiting for Approval" projects={this.props.waitingProjects} />
+          </div>
+        </div>
+        <div className="grid-flex grid-flex-between">
+          <div className="grid-flex-item-1-2">
+            <ProjectModule title="Delivered Projects" projects={this.props.deliveredProjects} />
+          </div>
+          <div className="grid-flex-item-1-2">
+            <ProjectModule title="Canceled Projects" projects={this.props.canceledProjects} />
+          </div>
+        </div>
       </div>
     )
   }

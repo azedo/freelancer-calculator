@@ -1,0 +1,53 @@
+.menu-toggle
+  display none
+
+.menu
+  position fixed
+  width 180px
+  top 0
+  bottom 0
+  background rgb(37, 42, 58)
+  color lightgray
+  overflow auto
+
+.menu-links
+  margin 0
+  padding 0 0 20px 0
+  display flex
+  flex-direction column
+  height 100%
+  li
+    list-style none
+    overflow hidden
+
+.menu-link,
+.menu-submenulink
+  color lightgray
+  text-decoration none
+  transition color ease 0.2s
+  width 100%
+  display block
+  box-sizing: border-box;
+  &:hover
+    background-color rgba(11, 16, 31, 0.4)
+
+.menu-link
+  padding 15px 0 15px 15px
+
+.menu-submenulink
+  padding 15px 0 15px 15px
+
+.menu-link-active
+  border-right 5px solid #F2F2F2
+  background-color rgba(11, 16, 31, 0.2)
+
+.menu-link-last
+  margin-bottom 20px
+
+.menu-link-active ~ .menu-submenu
+  display block
+
+.menu-submenu
+  display none
+  padding 0
+  background #1A1F2F

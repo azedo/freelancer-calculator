@@ -2,6 +2,7 @@
 
 // main imports
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 // components import
 import AssetForm from '../components/AssetForm';
 import AssetTable from '../components/AssetTable';
@@ -10,7 +11,7 @@ class AssetsFixed extends Component {
   render() {
     return (
       <div>
-        <h1>Assets / fixed</h1>
+        <h1><Link to="/app/assets">Assets</Link> / fixed</h1>
 
         <AssetForm addNewAsset={this.props.addNewAsset} type="fixed" />
 

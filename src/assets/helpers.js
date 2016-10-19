@@ -1,9 +1,22 @@
+// Shorten the string by set max number and add elipisis at the end
 export function shortString(str, max) {
   if (str.length > max) {
     return `${str.substring(0, (max-3))}...`;
   } else {
     return str;
   }
+}
+
+// Count objects in array literal
+export function objectLength(obj) {
+  var result = 0;
+  for(var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+    // or Object.prototype.hasOwnProperty.call(obj, prop)
+      result++;
+    }
+  }
+  return result;
 }
 
 // Check for toLocaleString support

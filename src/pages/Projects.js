@@ -9,20 +9,21 @@ class Projects extends Component {
   render() {
     return (
       <div>
+        <h1>Projects</h1>
         <div className="grid-flex grid-flex-between">
           <div className="grid-flex-item-1-2">
-            <ProjectModule title="Active Projects" projects={this.props.activeProjects} />
+            <ProjectModule title="Active Projects" projects={this.props.projects} type="active" />
           </div>
           <div className="grid-flex-item-1-2">
-            <ProjectModule title="Waiting for Approval" projects={this.props.waitingProjects} />
+            <ProjectModule title="Waiting for Approval" projects={this.props.projects} type="waiting" />
           </div>
         </div>
         <div className="grid-flex grid-flex-between">
           <div className="grid-flex-item-1-2">
-            <ProjectModule title="Delivered Projects" projects={this.props.deliveredProjects} />
+            <ProjectModule title="Delivered Projects" projects={this.props.projects} type="delivered" />
           </div>
           <div className="grid-flex-item-1-2">
-            <ProjectModule title="Canceled Projects" projects={this.props.canceledProjects} />
+            <ProjectModule title="Canceled Projects" projects={this.props.projects} type="canceled" />
           </div>
         </div>
       </div>

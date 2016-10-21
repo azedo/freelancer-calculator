@@ -56,38 +56,18 @@ class App extends Component {
   }
 
   render() {
-    function findProjectsByType(projects, type) {
-      let projectsArr = [];
-
-      if (projects) {
-        Object.keys(projects).map(key => {
-          if (projects[key][type] === true) {
-            projectsArr.push(projects[key]);
-          }
-          return projectsArr;
-        });
-      }
-      return projectsArr;
-    }
-
-    const activeProjectsArr = findProjectsByType(this.state.user.projects, 'active');
-    const waitingProjectsArr = findProjectsByType(this.state.user.projects, 'waiting');
-    const deliveredProjectsArr = findProjectsByType(this.state.user.projects, 'delivered');
-    const canceledProjectsArr = findProjectsByType(this.state.user.projects, 'canceled');
+    const projects = this.state.user.projects;
 
     return (
       <DocumentTitle title='App - FreelancerCalculator'>
         <div className="app pure-g">
-          <Menu user={this.state.user} activeProjects={activeProjectsArr} />
+          <Menu user={this.state.user} projects={projects} />
 
           <div className="content pure-u">
             <div className="inner page">
               {/* add the children components here */}
               {React.cloneElement(this.props.children, {
-                activeProjects: activeProjectsArr,
-                waitingProjects: waitingProjectsArr,
-                deliveredProjects: deliveredProjectsArr,
-                canceledProjects: canceledProjectsArr,
+                projects: projects,
                 assets: this.state.user.assets,
                 addNewAsset: this._addNewAsset,
                 removeAsset: this._removeAsset,

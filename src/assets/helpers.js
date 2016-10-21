@@ -30,6 +30,7 @@ function toLocaleStringSupportsLocales() {
   return false;
 }
 
+// Format price
 export function formatPrice(cents) {
   const browserLang = navigator.language || navigator.userLanguage;
   // Check for browser support for toLocaleString
@@ -41,10 +42,12 @@ export function formatPrice(cents) {
   }
 }
 
+// Randomize array
 export function rando(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Slugify string
 export function slugify(text) {
   return text.toString().toLowerCase()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -52,4 +55,34 @@ export function slugify(text) {
     .replace(/\-\-+/g, '-')         // Replace multiple - with single -
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '');            // Trim - from end of text
+}
+
+// Find projects in array by type
+export function findProjectsByType(projects, type) {
+  let projectsArr = [];
+
+  if (projects) {
+    Object.keys(projects).map(key => {
+      if (projects[key][type] === true) {
+        projectsArr.push(projects[key]);
+      }
+      return projectsArr;
+    });
+  }
+  return projectsArr;
+}
+
+// Find projects in array by ID
+export function findProjectsById(projects, id) {
+  let projectsArr = [];
+
+  if (projects) {
+    Object.keys(projects).map(key => {
+      if (projects[key].slug === id) {
+        projectsArr.push(projects[key]);
+      }
+      return projectsArr;
+    });
+  }
+  return projectsArr;
 }

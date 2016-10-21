@@ -1,10 +1,10 @@
 // This is just some sample data
 module.exports = {
   projects: {
-    'project01': {
-      name: 'Project 01',
+    'fcp': {
+      name: 'Fictional company project',
       hours: 30,
-      slug: 'project-01',
+      slug: 'fcp',
       settings: {
         money: 'euro',
         markup: 20,
@@ -18,10 +18,10 @@ module.exports = {
       canceled: false,
     },
 
-    'project02': {
-      name: 'Project 02',
+    'pffc': {
+      name: 'Project for fictional company',
       hours: 30,
-      slug: 'project-02',
+      slug: 'pffc',
       settings: {
         money: 'euro',
         markup: 20,
@@ -35,10 +35,10 @@ module.exports = {
       canceled: false,
     },
 
-    'project03': {
-      name: 'Project 03',
+    'google': {
+      name: 'Google project',
       hours: 30,
-      slug: 'project-03',
+      slug: 'google-project',
       settings: {
         money: 'euro',
         markup: 20,
@@ -52,10 +52,10 @@ module.exports = {
       canceled: false,
     },
 
-    'project04': {
-      name: 'Project 04',
+    'facebook': {
+      name: 'Facebook project',
       hours: 30,
-      slug: 'project-04',
+      slug: 'facebook-project',
       settings: {
         money: 'euro',
         markup: 20,

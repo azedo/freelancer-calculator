@@ -2,16 +2,23 @@
 
 // main imports
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import DocumentTitle from 'react-document-title';
+// other imports
+import { findProjectsById } from '../assets/helpers';
 
 class Project extends Component {
   render() {
-    const title = `${this.props.params.projectName} - FreelancerCalculator`;
+    // filter by project slug
+    const projectData = findProjectsById(this.props.projects, this.props.params.projectName);
+    const project = projectData[0];
+
+    const title = `${project.name} - FreelancerCalculator`;
+
     return (
       <DocumentTitle title={title}>
         <div>
-          <h2>This is the Project Page!</h2>
-          <h3>Name of project => {this.props.params.projectName}</h3>
+          <h1><Link to="/app/projects">Projects</Link> / {project.name}</h1>
         </div>
       </DocumentTitle>
     )

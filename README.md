@@ -21,9 +21,10 @@ The app's main purpose is to have an idea of how much you should charge a client
 - ~~Add a summary asset page;~~
 - ~~Add a asset page;~~
 - ~~Add a input asset component;~~
-- ~~Fix the menu info for the income/expenses~~;
-- ~~Finish the overview page~~;
+- ~~Fix the menu info for the income/expenses;~~
+- ~~Finish the overview page;~~
 - Finish the project page;
+- Project => Use the snapshot setting from when the project was created;
 - Finish the profile page;
 - Finish the settings page;
 - Add internationalization;

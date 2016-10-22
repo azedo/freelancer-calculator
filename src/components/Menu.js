@@ -16,7 +16,7 @@ class Menu extends Component {
         <div className="menu-toggle">Menu</div>
 
         <div className="inner">
-          <UserInfo user={this.props.user} />
+          <UserInfo user={this.props.user} updateIncomeExpenses={this.props.updateIncomeExpenses} />
 
           <ul className="menu-links">
             <li><NavLink className="menu-link" to="/app/overview">Overview</NavLink></li>

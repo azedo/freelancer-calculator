@@ -35,7 +35,7 @@ export function formatPrice(cents) {
   const browserLang = navigator.language || navigator.userLanguage;
   // Check for browser support for toLocaleString
   if (toLocaleStringSupportsLocales() === true) {
-    return cents.toLocaleString(browserLang, { minimumFractionDigits: '2' });
+    return cents.toLocaleString(browserLang, { maximumFractionDigits: '2', minimumFractionDigits: '2' });
   } else {
     // If the browser doesn't support, use this formula below
     return `${(cents / 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
@@ -85,4 +85,19 @@ export function findProjectsById(projects, id) {
     });
   }
   return projectsArr;
+}
+
+// Get depreciation assets that are stil valid
+export function validateAssets(assets) {
+  let assetsArr = [];
+
+  if (assets) {
+    Object.keys(assets).map(key => {
+      if ((assets[key].bought * assets[key].lifespan) >= Date.now()) {
+        assetsArr.push(assets[key]);
+      }
+      return assetsArr;
+    });
+  }
+  return assetsArr;
 }

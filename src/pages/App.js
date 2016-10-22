@@ -9,7 +9,14 @@ import Menu from '../components/Menu';
 import data from '../assets/data';
 
 // create an object for default data
-const defaultState = { user: data }
+const defaultState = {
+  user: data,
+  income: '',
+  expenses: '',
+  assetsFixed: '',
+  assetsVariable: '',
+  assetsDepreciation: '',
+}
 
 class App extends Component {
   constructor() {
@@ -17,9 +24,20 @@ class App extends Component {
 
     this._addNewAsset = this._addNewAsset.bind(this);
     this._removeAsset = this._removeAsset.bind(this);
+    this._updateIncomeExpenses = this._updateIncomeExpenses.bind(this);
 
     // getInitialState
     this.state = defaultState;
+  }
+
+  _updateIncomeExpenses(income, expenses, assetsFixed, assetsVariable, assetsDepreciation) {
+    this.setState({
+      income,
+      expenses,
+      assetsFixed,
+      assetsVariable,
+      assetsDepreciation,
+    });
   }
 
   _addNewAsset(asset, type) {
@@ -61,7 +79,7 @@ class App extends Component {
     return (
       <DocumentTitle title='App - FreelancerCalculator'>
         <div className="app pure-g">
-          <Menu user={this.state.user} projects={projects} />
+          <Menu user={this.state.user} projects={projects} updateIncomeExpenses={this._updateIncomeExpenses} />
 
           <div className="content pure-u">
             <div className="inner page">
@@ -69,6 +87,11 @@ class App extends Component {
               {React.cloneElement(this.props.children, {
                 projects: projects,
                 assets: this.state.user.assets,
+                income: this.state.income,
+                expenses: this.state.expenses,
+                assetsFixed: this.state.assetsFixed,
+                assetsVariable: this.state.assetsVariable,
+                assetsDepreciation: this.state.assetsDepreciation,
                 addNewAsset: this._addNewAsset,
                 removeAsset: this._removeAsset,
                 settings: this.state.user.settings,

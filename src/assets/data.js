@@ -3,13 +3,13 @@ module.exports = {
   projects: {
     'fcp': {
       name: 'Fictional company project',
-      hours: 30,
+      hours: 20,
       slug: 'fcp',
       settings: {
         money: 'euro',
-        markup: 20,
-        tax: 4.7,
-        discount: 10,
+        markup: 0.20,
+        tax: 0.047,
+        discount: 0.10,
         hour_error: 10,
       },
       active: true,
@@ -20,13 +20,13 @@ module.exports = {
 
     'pffc': {
       name: 'Project for fictional company',
-      hours: 30,
+      hours: 10,
       slug: 'pffc',
       settings: {
         money: 'euro',
-        markup: 20,
-        tax: 4.7,
-        discount: 10,
+        markup: 0.20,
+        tax: 0.047,
+        discount: 0.10,
         hour_error: 10,
       },
       active: false,
@@ -41,12 +41,12 @@ module.exports = {
       slug: 'google-project',
       settings: {
         money: 'euro',
-        markup: 20,
-        tax: 4.7,
-        discount: 10,
+        markup: 0.20,
+        tax: 0.047,
+        discount: 0.10,
         hour_error: 10,
       },
-      active: true,
+      active: false,
       delivered: true,
       waiting: false,
       canceled: false,
@@ -54,19 +54,19 @@ module.exports = {
 
     'facebook': {
       name: 'Facebook project',
-      hours: 30,
+      hours: 25,
       slug: 'facebook-project',
       settings: {
         money: 'euro',
-        markup: 20,
-        tax: 4.7,
-        discount: 10,
+        markup: 0.20,
+        tax: 0.047,
+        discount: 0.10,
         hour_error: 10,
       },
-      active: false,
+      active: true,
       delivered: false,
       waiting: false,
-      canceled: true,
+      canceled: false,
     },
   },
 
@@ -74,49 +74,56 @@ module.exports = {
     fixed: {
       '01': {
         name: 'Condomínio',
-        amount: 15000,
+        amount: 1500,
       },
       '02': {
         name: 'Internet',
-        amount: 4495,
+        amount: 44.95,
       },
       '03': {
         name: 'Faxina',
-        amount: 10000,
+        amount: 100.00,
       },
     },
 
     variable: {
       '01': {
         name: 'Slicy',
-        amount: 6126,
+        amount: 61.26,
       },
       '02': {
         name: 'Eon',
-        amount: 5700,
+        amount: 57.00,
       },
       '03': {
         name: 'WP Migrate DB Pro',
-        amount: 9064,
+        amount: 90.64,
       },
     },
 
     depreciation: {
       '01': {
         name: 'Slicy',
-        amount: 6126,
+        amount: 61.26,
         lifespan: 3,
         bought: 1476464993098,
+      },
+      '02': {
+        name: 'Eon',
+        amount: 10.32,
+        lifespan: 1,
+        bought: 1446087995848,
       }
     },
   },
 
   settings: {
     currency: 'euro',
-    markup: 20,
-    tax: 4.7,
-    discount: 10,
+    markup: 0.20,
+    tax: 0.047,
+    discount: 0.10,
     hour_error: 10,
+    salary: 2000,
   },
 
   profile: {

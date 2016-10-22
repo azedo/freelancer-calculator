@@ -18,9 +18,12 @@ The app's main purpose is to have an idea of how much you should charge a client
 (Unfortunatelly) it's not magical... So you still need to have an idea of how much time you're going to spend on each project. The app is here just to help you with the math and to keep track on your monthly income and expenses.
 
 ## Todo
-- ~~Add a summary asset page~~
-- ~~Add a asset page~~
-- ~~Add a input asset component~~
+- ~~Add a summary asset page;~~
+- ~~Add a asset page;~~
+- ~~Add a input asset component;~~
+- ~~Fix the menu info for the income/expenses~~;
+- ~~Finish the overview page~~;
+- Finish the project page;
 - Finish the profile page;
 - Finish the settings page;
 - Add internationalization;

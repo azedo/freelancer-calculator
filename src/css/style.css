@@ -136,6 +136,21 @@
 .pure-table thead th:last-child {
   width: 10px;
 }
+.notice {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.notice.success {
+  background-color: #ceecce;
+}
+.notice.error {
+  background-color: #eccece;
+}
+.notice p {
+  margin: 0;
+}
 .content {
   position: fixed;
   right: 0;
@@ -164,6 +179,13 @@
 }
 .module h6 {
   margin: 0 auto;
+}
+.module ul {
+  list-style: none;
+  padding: 0;
+}
+.module ul ul {
+  padding-left: 15px;
 }
 .card {
   margin-bottom: 20px;
